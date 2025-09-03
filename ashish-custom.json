@@ -1,0 +1,177 @@
+{
+  "templates": [
+    {
+      "type": 1,
+      "title": "NGINX Web Server",
+      "sub_title": "Latest",
+      "description": "A high-performance web server and reverse proxy server. Perfect for hosting static websites, serving as a reverse proxy, or load balancer.",
+      "logo": "https://nginx.org/nginx.png",
+      "location": "https://nginx.org/",
+      "platform": "linux/amd64",
+      "image": "nginx:latest",
+      "command": "nginx -g 'daemon off;'",
+      "env": [
+        { "name": "NGINX_HOST", "value": "localhost" },
+        { "name": "NGINX_PORT", "value": "80" }
+      ],
+      "labels": [
+        { "name": "com.qnap.vendor", "value": "QNAP Systems" },
+        { "name": "com.qnap.template", "value": "nginx" },
+        { "name": "version", "value": "1.0" }
+      ],
+      "volumes": [
+        {
+          "container": "/usr/share/nginx/html",
+          "volume": "nginx-html"
+        },
+        {
+          "container": "/etc/nginx/conf.d",
+          "volume": "nginx-config"
+        }
+      ],
+      "ports": ["8080:80/tcp"],
+      "hostname": "nginx-server",
+      "restart_policy": "unless-stopped",
+      "interactive": false,
+      "tty": false,
+      "privileged": false
+    },
+    {
+      "type": 1,
+      "title": "Portainer",
+      "sub_title": "Latest",
+      "description": "Lightweight management UI which allows you to easily manage different Docker environments. Perfect for managing your QNAP Docker containers.",
+      "logo": "https://portainer.io/images/logos/portainer/portainer-logo.png",
+      "location": "https://portainer.io/",
+      "platform": "linux/amd64",
+      "image": "portainer/portainer-ce:latest",
+      "command": "",
+      "env": [],
+      "labels": [
+        { "name": "com.qnap.vendor", "value": "QNAP Systems" },
+        { "name": "com.qnap.template", "value": "portainer" },
+        { "name": "version", "value": "1.0" }
+      ],
+      "volumes": [
+        {
+          "container": "/var/run/docker.sock",
+          "bind": "/var/run/docker.sock",
+          "readonly": true
+        },
+        {
+          "container": "/data",
+          "volume": "portainer-data"
+        }
+      ],
+      "ports": ["9000:9000/tcp"],
+      "hostname": "portainer",
+      "restart_policy": "unless-stopped",
+      "interactive": false,
+      "tty": false,
+      "privileged": false
+    },
+    {
+      "type": 1,
+      "title": "Grafana",
+      "sub_title": "Latest",
+      "description": "The open and composable observability and data visualization platform. Visualize metrics, logs, and traces from multiple sources.",
+      "logo": "https://grafana.com/static/img/menu/grafana2.svg",
+      "location": "https://grafana.com/",
+      "platform": "linux/amd64",
+      "image": "grafana/grafana:latest",
+      "command": "",
+      "env": [
+        { "name": "GF_SECURITY_ADMIN_PASSWORD", "value": "admin" }
+      ],
+      "labels": [
+        { "name": "com.qnap.vendor", "value": "QNAP Systems" },
+        { "name": "com.qnap.template", "value": "grafana" },
+        { "name": "version", "value": "1.0" }
+      ],
+      "volumes": [
+        {
+          "container": "/var/lib/grafana",
+          "volume": "grafana-data"
+        }
+      ],
+      "ports": ["3000:3000/tcp"],
+      "hostname": "grafana",
+      "restart_policy": "unless-stopped",
+      "interactive": false,
+      "tty": false,
+      "privileged": false
+    },
+    {
+      "type": 1,
+      "title": "Prometheus",
+      "sub_title": "Latest",
+      "description": "An open-source systems monitoring and alerting toolkit. Collect metrics from configured targets at given intervals, evaluate rule expressions, and trigger alerts.",
+      "logo": "https://prometheus.io/assets/prometheus_logo_orange_circle.svg",
+      "location": "https://prometheus.io/",
+      "platform": "linux/amd64",
+      "image": "prom/prometheus:latest",
+      "command": "",
+      "env": [],
+      "labels": [
+        { "name": "com.qnap.vendor", "value": "QNAP Systems" },
+        { "name": "com.qnap.template", "value": "prometheus" },
+        { "name": "version", "value": "1.0" }
+      ],
+      "volumes": [
+        {
+          "container": "/prometheus",
+          "volume": "prometheus-data"
+        },
+        {
+          "container": "/etc/prometheus/prometheus.yml",
+          "bind": "/share/Container/prometheus.yml",
+          "readonly": true
+        }
+      ],
+      "ports": ["9090:9090/tcp"],
+      "hostname": "prometheus",
+      "restart_policy": "unless-stopped",
+      "interactive": false,
+      "tty": false,
+      "privileged": false
+    },
+    {
+      "type": 1,
+      "title": "Jellyfin Media Server",
+      "sub_title": "Latest",
+      "description": "The Free Software Media System. Stream media to any device from your own server. Perfect for organizing and streaming your media collection.",
+      "logo": "https://jellyfin.org/images/jellyfin-logo-full-light.svg",
+      "location": "https://jellyfin.org/",
+      "platform": "linux/amd64",
+      "image": "jellyfin/jellyfin:latest",
+      "command": "",
+      "env": [
+        { "name": "PUID", "value": "1000" },
+        { "name": "PGID", "value": "1000" },
+        { "name": "TZ", "value": "America/New_York" }
+      ],
+      "labels": [
+        { "name": "com.qnap.vendor", "value": "QNAP Systems" },
+        { "name": "com.qnap.template", "value": "jellyfin" },
+        { "name": "version", "value": "1.0" }
+      ],
+      "volumes": [
+        {
+          "container": "/config",
+          "volume": "jellyfin-config"
+        },
+        {
+          "container": "/media",
+          "bind": "/share/Multimedia",
+          "readonly": true
+        }
+      ],
+      "ports": ["8096:8096/tcp"],
+      "hostname": "jellyfin",
+      "restart_policy": "unless-stopped",
+      "interactive": false,
+      "tty": false,
+      "privileged": false
+    }
+  ]
+}
