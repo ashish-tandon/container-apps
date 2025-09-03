@@ -1,0 +1,724 @@
+{"templates":
+[
+  {
+    "type": 1,
+    "title": "APT mirroring server",
+    "sub_title": "0.1.2",
+    "description": "A small and efficient tool that lets you mirror a part of or the whole Debian GNU/Linux distribution or any other apt sources.",
+    "logo": "",
+    "location": "https://hub.docker.com/r/seterrychen/apt-mirror-http-server",
+    "platform": "linux/amd64",
+    "image": "seterrychen/apt-mirror-http-server:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "apt-mirroring-server-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "apt-mirroring-server",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "CAFFE - GPU",
+    "sub_title": "gpu",
+    "description": "CAFFE (Convolutional Architecture for Fast Feature Embedding) is a deep learning framework. This is official CAFFE image.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/ai_default.png",
+    "location": "https://hub.docker.com/r/bvlc/caffe/",
+    "platform": "linux/amd64",
+    "image": "bvlc/caffe:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "caffe---gpu-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "caffe---gpu",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "CAFFE Demo - GPU",
+    "sub_title": "0.1beta-gpu",
+    "description": "This is a photo recognition demo version generated using CAFFE deep learning framework.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/ai_default.png",
+    "location": "https://hub.docker.com/r/qnapnas/caffedemo/",
+    "platform": "linux/amd64",
+    "image": "qnapnas/caffedemo:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "caffe-demo---gpu-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "caffe-demo---gpu",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "CNTK - GPU",
+    "sub_title": "2.6-gpu-python3.5-cuda9.0-cudnn7.0",
+    "description": "Microsoft Cognitive Toolkit (CNTK) is an open source deep-learning toolkit.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/ai_default.png",
+    "location": "https://hub.docker.com/r/microsoft/cntk/",
+    "platform": "linux/amd64",
+    "image": "microsoft/cntk:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "cntk---gpu-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "cntk---gpu",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "CentOS",
+    "sub_title": "7",
+    "description": "The official build of CentOS.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/centos_icon.png",
+    "location": "https://hub.docker.com/_/centos",
+    "platform": "linux/amd64",
+    "image": "centos:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "centos-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "centos",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Chainer - GPU",
+    "sub_title": "v6.0.0b1",
+    "description": "Chainer is a Python-based deep learning framework aiming at flexibility. This is official Chainer image.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/ai_default.png",
+    "location": "https://hub.docker.com/r/chainer/chainer",
+    "platform": "linux/amd64",
+    "image": "chainer/chainer:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "chainer---gpu-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "chainer---gpu",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Dashing",
+    "sub_title": "0.1",
+    "description": "Run Dashing in a Docker container",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/iot_default.png",
+    "location": "https://hub.docker.com/r/qnapnas/qiot-dashing_amd64/",
+    "platform": "linux/amd64",
+    "image": "qnapnas/qiot-dashing_amd64:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "dashing-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "dashing",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Debian",
+    "sub_title": "10",
+    "description": "Debian is a Linux distribution that is composed entirely of free and open-source software (most of which is under the GNU General Public License) and packaged by a group called the Debian project.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/debian_icon.png",
+    "location": "http://download.qnap.com/QPKG/container/debian-buster_10_20191009_amd64.tar.gz",
+    "platform": "linux/amd64",
+    "image": "debian:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "debian-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "debian",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Deluge",
+    "sub_title": "143",
+    "description": "Deluge is a lightweight, free, cross-platform BT client.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/deluge_icon.png",
+    "location": "https://hub.docker.com/r/linuxserver/deluge",
+    "platform": "linux/amd64",
+    "image": "linuxserver/deluge:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "deluge-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "deluge",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Fedora",
+    "sub_title": "28",
+    "description": "Fedora (formerly Fedora Core) is an operating system based on the Linux kernel, developed by the community-supported Fedora Project and owned by Red Hat.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/fedora_icon.png",
+    "location": "http://download.qnap.com/QPKG/container/fedora-twentyeight_28_amd64.tar.gz",
+    "platform": "linux/amd64",
+    "image": "fedora:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "fedora-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "fedora",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "GitLab",
+    "sub_title": "11.4.0",
+    "description": "GitLab is a web-based Git repository manager with code reviews, issue tracking, activity feeds and wikis.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/app_gitlab.png",
+    "location": "https://hub.docker.com/r/sameersbn/gitlab",
+    "platform": "linux/amd64",
+    "image": "sameersbn/gitlab:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "gitlab-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "gitlab",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Home Assistant",
+    "sub_title": "0.65.5",
+    "description": "Open-source home automation platform running on Python 3.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/iot_home_assistant.png",
+    "location": "https://hub.docker.com/r/homeassistant/home-assistant/",
+    "platform": "linux/amd64",
+    "image": "homeassistant/home-assistant:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "home-assistant-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "home-assistant",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Jenkins",
+    "sub_title": "2.60.3",
+    "description": "The official build of Jenkins.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/jenkins_icon.png",
+    "location": "https://hub.docker.com/_/jenkins",
+    "platform": "linux/amd64",
+    "image": "jenkins:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "jenkins-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "jenkins",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Joomla!",
+    "sub_title": "3.8.13",
+    "description": "Joomla! is a free, powerful open source content management system. It is designed for quickly creating online communities, blogs and eCommerce applications.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/app_joomla.png",
+    "location": "https://hub.docker.com/r/seterrychen/joomla-without-database",
+    "platform": "linux/amd64",
+    "image": "seterrychen/joomla-without-database:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "joomla!-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "joomla!",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "LibreOffice with noVNC",
+    "sub_title": "1.0",
+    "description": "Ubuntu Desktop is pre-loaded with LibreOffice and Firefox. LibreOffice is a powerful office suite that includes: Writer (word processor), Calc (spreadsheet application), Impress (presentation engine), Draw (drawing and flowcharting application), Base (database and database frontend), and Math (editing mathematics).",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/libreoffice_icon.png",
+    "location": "https://hub.docker.com/r/colinhuang/ubuntu-libreoffice",
+    "platform": "linux/amd64",
+    "image": "colinhuang/ubuntu-libreoffice:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "libreoffice-with-novnc-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "libreoffice-with-novnc",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "MQTT",
+    "sub_title": "0.1",
+    "description": "MQTT Mosquitto 1.5.8 build on ubuntu 14.4",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/iot_mqtt.png",
+    "location": "https://hub.docker.com/r/qnapnas/qiot-mosquitto_amd64/",
+    "platform": "linux/amd64",
+    "image": "qnapnas/qiot-mosquitto_amd64:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "mqtt-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "mqtt",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "MXNet - GPU",
+    "sub_title": "1.3.1_gpu_cu92_mkl_py3",
+    "description": "MXNet is a deep learning framework used to train and deploy deep neural networks. This is MXNet with the Python package.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/ai_mxnet.png",
+    "location": "https://hub.docker.com/r/mxnet/python/",
+    "platform": "linux/amd64",
+    "image": "mxnet/python:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "mxnet---gpu-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "mxnet---gpu",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "MongoDB",
+    "sub_title": "4.1.4",
+    "description": "MongoDB document databases provide high availability and easy scalability.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/mongo_icon.png",
+    "location": "https://hub.docker.com/_/mongo",
+    "platform": "linux/amd64",
+    "image": "mongo:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "mongodb-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "mongodb",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "MySQL",
+    "sub_title": "8.0.12",
+    "description": "MySQL Server image - listens in port 3306. For the root account password, either set MYSQL_ROOT_PASSWORD environment variable, or check the logs for a randomly generated one.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/mysql_icon.png",
+    "location": "https://hub.docker.com/r/edhongcy/mysql",
+    "platform": "linux/amd64",
+    "image": "edhongcy/mysql:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "mysql-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "mysql",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Nginx",
+    "sub_title": "1.14",
+    "description": "The official build of Nginx.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/nginx_icon.png",
+    "location": "https://hub.docker.com/_/nginx",
+    "platform": "linux/amd64",
+    "image": "nginx:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "nginx-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "nginx",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Node-RED",
+    "sub_title": "latest",
+    "description": "Node-RED visual tool for wiring the Internet of Things",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/iot_node_red.png",
+    "location": "https://hub.docker.com/r/nodered/node-red/",
+    "platform": "linux/amd64",
+    "image": "nodered/node-red:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "node-red-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "node-red",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Odoo",
+    "sub_title": "12",
+    "description": "Odoo (formerly OpenERP): open source ERP and Apps to grow your business.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/app_odoo.png",
+    "location": "https://hub.docker.com/_/odoo",
+    "platform": "linux/amd64",
+    "image": "odoo:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "odoo-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "odoo",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Ponte",
+    "sub_title": "0.1",
+    "description": "Ponte is an Internet of Things / Machine to Machine platform that connect Things to Web developers",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/iot_default.png",
+    "location": "https://hub.docker.com/r/qnapnas/qiot-ponte_amd64/",
+    "platform": "linux/amd64",
+    "image": "qnapnas/qiot-ponte_amd64:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "ponte-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "ponte",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "PostgreSQL",
+    "sub_title": "11.0",
+    "description": "Official PostgreSQL Docker image. The PostgreSQL object-relational database system provides reliability and data integrity.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/postgresql_icon.png",
+    "location": "https://hub.docker.com/_/postgres",
+    "platform": "linux/amd64",
+    "image": "postgres:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "postgresql-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "postgresql",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Pytorch - GPU",
+    "sub_title": "1.0.1-cuda10.0-cudnn7-devel",
+    "description": "PyTorch is a deep learning framework that puts Python first. It provides Tensors and Dynamic neural networks in Python with strong GPU acceleration.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/ai_default.png",
+    "location": "https://hub.docker.com/r/pytorch/pytorch",
+    "platform": "linux/amd64",
+    "image": "pytorch/pytorch:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "pytorch---gpu-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "pytorch---gpu",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "RabbitMQ",
+    "sub_title": "3.6.6-management",
+    "description": "RabbitMQ is a highly reliable enterprise messaging system based on the emerging AMQP standard",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/iot_rabbit_mq.png",
+    "location": "https://hub.docker.com/r/qnapnas/qiot-rabbitmq_amd64/",
+    "platform": "linux/amd64",
+    "image": "qnapnas/qiot-rabbitmq_amd64:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "rabbitmq-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "rabbitmq",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Redis",
+    "sub_title": "5.0",
+    "description": "Redis is an open source key-value store that functions as a data structure server.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/redis_icon.png",
+    "location": "https://hub.docker.com/_/redis",
+    "platform": "linux/amd64",
+    "image": "redis:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "redis-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "redis",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Redis Commander",
+    "sub_title": "0.1",
+    "description": "Redis management tool written in node.js",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/iot_default.png",
+    "location": "https://hub.docker.com/r/qnapnas/qiot-redis-commander_amd64/",
+    "platform": "linux/amd64",
+    "image": "qnapnas/qiot-redis-commander_amd64:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "redis-commander-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "redis-commander",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Redmine",
+    "sub_title": "3.4.6",
+    "description": "Redmine is a free and open source web-based project management system.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/app_redmine.png",
+    "location": "https://hub.docker.com/r/sameersbn/redmine",
+    "platform": "linux/amd64",
+    "image": "sameersbn/redmine:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "redmine-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "redmine",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Registry",
+    "sub_title": "2.6.2",
+    "description": "The Registry is a tool for building private registries. It is highly scalable server side application for storing and distributing Docker images.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/app_registry.png",
+    "location": "https://hub.docker.com/_/registry",
+    "platform": "linux/amd64",
+    "image": "registry:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "registry-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "registry",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  }
+]
+}

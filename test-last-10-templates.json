@@ -1,0 +1,244 @@
+{"templates":
+[
+  {
+    "type": 1,
+    "title": "Registry",
+    "sub_title": "2.6.2",
+    "description": "The Registry is a tool for building private registries. It is highly scalable server side application for storing and distributing Docker images.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/app_registry.png",
+    "location": "https://hub.docker.com/_/registry",
+    "platform": "linux/amd64",
+    "image": "registry:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "registry-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "registry",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "TensorFlow - GPU",
+    "sub_title": "1.13.1-gpu-py3",
+    "description": "TensorFlow is an open-source software library for Machine Intelligence. This is official docker image for deep learning framework TensorFlow.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/ai_tensorflow.png",
+    "location": "https://hub.docker.com/r/tensorflow/tensorflow/",
+    "platform": "linux/amd64",
+    "image": "tensorflow/tensorflow:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "tensorflow---gpu-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "tensorflow---gpu",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Ubuntu",
+    "sub_title": "16.04",
+    "description": "Fast, free and incredibly easy to use, the Ubuntu operating system powers millions of desktop PCs, laptops and servers around the world.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/ubuntu_icon.png",
+    "location": "http://download.qnap.com/QPKG/container/ubuntu-xenial_16.04_20171130_amd64.tar.gz",
+    "platform": "linux/amd64",
+    "image": "ubuntu:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "ubuntu-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "ubuntu",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Ubuntu desktop with noVNC",
+    "sub_title": "bionic",
+    "description": "Remote desktop Sharing in Ubuntu 18.04.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/ubuntu_icon.png",
+    "location": "https://hub.docker.com/r/dorowu/ubuntu-desktop-lxde-vnc",
+    "platform": "linux/amd64",
+    "image": "dorowu/ubuntu-desktop-lxde-vnc:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "ubuntu-desktop-with-novnc-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "ubuntu-desktop-with-novnc",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "Wio Link",
+    "sub_title": "latest",
+    "description": "Wio Link is designed to simplify your IoT development. It is an ESP8266 based Wi-Fi development board for you to create IoT applications with open-source, plug and play electronics, mobile APPs and RESTful APIs.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/iot_wiolink.png",
+    "location": "https://hub.docker.com/r/killingjacky/wio_link/",
+    "platform": "linux/amd64",
+    "image": "killingjacky/wio_link:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "wio-link-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "wio-link",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "WordPress",
+    "sub_title": "4.9.8",
+    "description": "WordPress is a rich content management system for creating blogs and websites with plugins, widgets, and themes.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/app_wordpress.png",
+    "location": "https://hub.docker.com/_/wordpress",
+    "platform": "linux/amd64",
+    "image": "wordpress:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "wordpress-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "wordpress",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "freeboard",
+    "sub_title": "0.1",
+    "description": "A damn-sexy, open source real-time dashboard builder for IOT and other web mashups",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/iot_freeboard.png",
+    "location": "https://hub.docker.com/r/qnapnas/qiot-freeboard_amd64/",
+    "platform": "linux/amd64",
+    "image": "qnapnas/qiot-freeboard_amd64:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "freeboard-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "freeboard",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "iFrogLab/LoRaGateway",
+    "sub_title": "latest",
+    "description": "LoRaGateWay, PHP, MySQL, myphpadmin, Dashboard",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/iot_ifroglab.png",
+    "location": "https://hub.docker.com/r/ifroglab/loragateway/",
+    "platform": "linux/amd64",
+    "image": "ifroglab/loragateway:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "ifroglab/loragateway-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "ifroglab/loragateway",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "mqtt-spy",
+    "sub_title": "0.1",
+    "description": "mqtt-spy is an open source utility intended to help you with monitoring activity on MQTT topics",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/iot_default.png",
+    "location": "https://hub.docker.com/r/qnapnas/qiot-mqtt-spy_amd64/",
+    "platform": "linux/amd64",
+    "image": "qnapnas/qiot-mqtt-spy_amd64:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "mqtt-spy-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "mqtt-spy",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  },
+  {
+    "type": 1,
+    "title": "openHAB",
+    "sub_title": "2.2.0-amd64-debian",
+    "description": "A vendor and technology agnostic open source automation software for home.",
+    "logo": "https://raw.githubusercontent.com/qnap-dev/container-apps/2.0/images/iot_openhab.png",
+    "location": "https://hub.docker.com/r/openhab/openhab/",
+    "platform": "linux/amd64",
+    "image": "openhab/openhab:latest",
+    "volumes": [
+      {
+        "container": "/data",
+        "volume": "openhab-data"
+      }
+    ],
+    "ports": [
+      "8080:80/tcp"
+    ],
+    "hostname": "openhab",
+    "restart_policy": "unless-stopped",
+    "interactive": false,
+    "tty": false,
+    "privileged": false
+  }
+]
+}
